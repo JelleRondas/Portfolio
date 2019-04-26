@@ -1,0 +1,42 @@
+body {
+	background-color: white;
+}
+
+h1, p {
+	color: #363534;
+}
+
+nav{
+  background-color: #C2D8F8;
+}
+
+nav a {
+	color: #00234C;
+	margin-bottom: 3rem;
+	border-bottom: 3px solid #00234C;
+}
+
+nav a:hover{
+	color:white;
+	border-bottom: 3px solid white;
+}
+
+.dark, .light{
+	border:0;
+}
+
+.light{
+	display:none;
+}
+
+footer{
+	background-color: #C2D8F8;
+}
+
+footer p{
+	color:#00234C;
+}
+
+.socials i{
+	color:#00234C;
+}
