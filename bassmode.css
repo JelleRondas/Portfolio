@@ -1,0 +1,23 @@
+
+	#bassmode div{
+		background-size: cover;
+
+	}
+
+	#bassmode_logo{
+		background-image: url('img/bassmode_logo.png');
+		background-size: cover;
+		background-color: black;
+		grid-column: 1;
+	}
+
+	#bassmode_sticker{
+		background-image: url('img/bassmode_sticker.jpg');
+		grid-column: 2;
+		grid-row:1;
+	}
+
+	#bassmode_foto{
+		background-image: url('img/bassmode_foto.jpg');
+		grid-column: 3;
+	}

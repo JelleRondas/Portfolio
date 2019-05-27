@@ -8,7 +8,7 @@ let mainGedeelte = document.querySelector("main");
 let titel = document.querySelector("header h1");
 let logo = document.querySelector(".logo");
 
-function verbergMenu() {
+/*function verbergMenu() {
 	navMenu.classList.add("onzichtbaar");
 }
 mainGedeelte.addEventListener("click",verbergMenu);
@@ -19,7 +19,7 @@ navMenu.addEventListener("click",verbergMenu);
 function toonMenu() {
 	navMenu.classList.remove("onzichtbaar");
 }
-menuKnop.addEventListener("click",toonMenu);
+menuKnop.addEventListener("click",toonMenu);*/
 
 
 
@@ -49,19 +49,34 @@ while (i<imgDivs.length) {
 }
 
 //dark mode
-let darkLink = document.querySelectorAll("nav a")[2];
-let lightLink = document.querySelectorAll("nav a")[3];
+let darkLink = document.querySelectorAll("nav ul li a")[2];
+let lightLink = document.querySelectorAll("nav ul li a")[3];
 let mijnCSS = document.querySelector("#switchcss");
 
 function switchToLight() {
 	mijnCSS.setAttribute("href","stijl-light.css");
-	menuKnopIMG.setAttribute("src","img/hamburger.svg");
 	logo.setAttribute("src","img/logo.svg");
 }
 function switchToDark() {
 	mijnCSS.setAttribute("href","stijl-dark.css");
-	menuKnopIMG.setAttribute("src","img/hamburger_white.svg");
 	logo.setAttribute("src","img/logo_white.svg");
 }
 lightLink.addEventListener("click",switchToLight);
 darkLink.addEventListener("click",switchToDark);
+
+
+
+
+let button = document.querySelector("button");
+let body = document.querySelector("body");
+
+
+function test() {
+	body.classList.toggle('open');
+	button.classList.toggle('is-active');
+}
+
+
+button.addEventListener("click",test);
+
+

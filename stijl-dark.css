@@ -11,18 +11,16 @@ header h1{
 }
 
 nav{
-  background-color: #00234C;
+  background-color: rgba(0, 35, 76, 0.9);
 }
 
 nav a {
 	color: #C2D8F8;
 	margin-bottom: 3rem;
-	border-bottom: 3px solid #315282;
 }
 
 nav a:hover{
 	color:white;
-	border-bottom: 3px solid white;
 }
 
 .dark, .light{
@@ -52,4 +50,12 @@ footer{
 
 .socials i:hover{
 	color:#C2D8F8;
+}
+
+button{
+	background-color:white;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after, .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	background-color:white;
 }

@@ -7,19 +7,18 @@ h1, p {
 }
 
 nav{
-  background-color: #C2D8F8;
+  /*background-color: rgba(194, 216, 248, 0.9);*/
 }
 
 nav a {
 	color: #00234C;
 	margin-bottom: 3rem;
-	border-bottom: 3px solid #00234C;
+	
 }
 
-nav a:hover{
+/*nav a:hover{
 	color:white;
-	border-bottom: 3px solid white;
-}
+}*/
 
 .dark, .light{
 	border:0;

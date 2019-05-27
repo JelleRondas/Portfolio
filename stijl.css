@@ -6,12 +6,6 @@ body{
   font-family: sans-serif;
 }
 
-.menu {
-	position: fixed;
-	top: 2rem;
-	right: 2rem;
-}
-
 .menu img{
 	height:5rem;
 	background-blend-mode: screen;
@@ -20,21 +14,25 @@ body{
 nav a {
 	display: block;
 	text-decoration: none;
-	color: #C2D8F8;
 	font-size: 2.5rem;
-	margin-bottom: 3rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	text-align: right;
-	border-bottom: .2rem solid #C2D8F8;
-	transition: .3s;
+	text-align: center;
 	font-family: "Open Sans";
+	  background:
+     linear-gradient(to bottom, #00234C 0%, #00234C 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-y;
+	background-size: 0px 0px;
+	text-decoration: none;
+	transition: background-size .3s;
+	padding:.5rem;
 }
 
 nav a:hover{
-	color:white;
+	background-size: 300px 50px;
 	transition: .3s;
-	border-bottom: .2rem solid white;
+	color:white;
 }
 
 header{
@@ -77,18 +75,9 @@ main{
 	margin-top: 13vh;
 	width:95%;
 	margin-bottom: 5vh;
-
 }
 
-nav {
-	background-color: #00234C;
-	width: 50%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	right: 0;
-	padding: 3rem;
-}
+
 
 .photos{
 	display:grid;
@@ -136,13 +125,6 @@ main p{
 	font-size: 1.3rem;
 }
 
-.light, .dark{
-	bottom:0;
-	position: absolute;
-	right:0;
-	padding:3rem;
-	margin:0;
-}
 
 .light img, .dark img{
 	width:10vw;
@@ -202,6 +184,191 @@ footer p{
 .push{
 	height:50vh;
 	grid-row: 3;
+}
+
+
+
+.open ul.menu li{
+	      opacity: 1;
+      transform: translate3d(0,0,0);
+      transition: transform 0.2s ease-out,
+                  opacity 0.2s ease-out;
+}
+
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.04)
+               translateY(300%);
+  }
+  40% {
+    transform: scale(0.04)
+               translateY(0);
+    transition: ease-out;
+  }
+  40% {
+    transform: scale(0.04)
+               translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.02)
+               translateY(0px);
+  }
+  61% {
+    transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
+}
+
+
+button{
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  top: 24px;
+  right: 5rem;
+  border: none;
+  width: 36px;
+  height: 30px;
+  outline: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.nieuweimg{
+	animation-name: animatiefoto;
+	animation:
+}
+
+@keyframes animatiefoto {
+	50%{
+		transform: rotate(10deg);
+	}
+}
+
+
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  cursor: pointer;
+  padding: 6px 20px;
+  font-size: 48px;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+nav:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: rgba(194, 216, 248, 0.97); width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.open nav {
+	top: 0;
+}
+.open nav:before {
+	animation: menu-animation 0.8s ease-out forwards;
+}
+
+ul.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          backface-visibility: hidden;
+  color: white;
+}
+ul.menu li {
+	opacity: 0;
+	text-align: center;
+}
+
+}
+.open ul.menu li {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+.open ul.menu li:nth-child(1) {
+  transition-delay: 0.75s;
+}
+.open ul.menu li:nth-child(2) {
+  transition-delay: 0.85s;
+}
+.open ul.menu li:nth-child(3) {
+  transition-delay: 0.95s;
+}
+.open ul.menu li:nth-child(4) {
+  transition-delay: 1.05s;
+}
+.open ul.menu li:nth-child(5) {
+  transition-delay: 1.15s;
+}
+
+.zero{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap:2rem;
+
+}
+
+.zero p{
+	grid-row: 2;
+
+
+}
+
+.zero h2{
+	grid-row: 1;
+
+}
+
+.zero video{
+	height: 30vh;
+
+	grid-row: 3;
+}
+
+.slideshow{
+	margin: auto;
+	grid-row: 4;
 }
 
 
@@ -301,8 +468,69 @@ footer p{
 	background-image: url('img/compressed/18.jpg');
 }
 
+.bassmode .photos{
+	grid-template-columns: 1fr 1fr 1fr;
+}
 
 
+.nieuweimg{
+	animation-name:test;
+	animation-duration: .3s;
+}
+
+@keyframes test{
+	50%{
+		transform: scale(.9);
+	}
+}
+
+/* --- slideshow ---*/
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
 
 
@@ -310,9 +538,6 @@ footer p{
 	@media (min-width: 700px) {
 		main{
 			width:90%;
-		}
-		nav{
-			width:30%;
 		}
 		.light img, .dark img{
 			width:6vw;
@@ -348,11 +573,36 @@ footer p{
 			grid-column: 2/4;
 			height:100%;
 		}
+		.zero{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap:2rem;
+
+		}
+
+		.zero p{
+			grid-row: 2;
+			grid-column: 1/3;
+
+		}
+
+		.zero h2{
+			grid-row: 1;
+			grid-column: 1/3;
+		}
+
+		.zero video{
+			height: 30vh;
+			grid-column: 2;
+			grid-row: 3;
+		}
+
+		.slideshow{
+			grid-column: 1;
+			grid-row: 3;
+		}
 	}
 	@media (min-width: 1100px) {
-		nav{
-			width:20%;
-		}
 		.light img, .dark img{
 			width:3.5vw;
 		}

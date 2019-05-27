@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Portfolio</title>
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="reset_plus.css">
+		<link rel="stylesheet" type="text/css" href="stijl.css">
+		<link rel="stylesheet" type="text/css" id="switchcss" href="stijl-light.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link href="hamburgers.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="bassmode.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="script.js" defer></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+    <header>
+			<img src="img/logo2.svg" class="logo" alt="">
+			<h1>Rondas Jelle <br><b>Portfolio</b></h1>
+			<button class="hamburger hamburger--elastic" type="button">
+				<span class="hamburger-box">
+			    	<span class="hamburger-inner"></span>
+				</span>
+			</button>
+			<nav>
+				<ul class="menu">
+					<li><a href="index.html">home</a></li>
+					<li><a href="zeropointfive.html">Zero Point Five</a></li>
+					<li><a href="bassmode.html">Bassmode</a></li>
+					<li><a href="about.html">about</a></li>
+				</ul>
+			</nav>
+    </header>
+		<main id="bassmode">
+			<h2>Bassmode</h2>
+			<section class="photos" style="grid-template-columns: 1fr 1fr 1fr; padding-top:10rem;">
+				<div data-img="img/bassmode_logo.png" id="bassmode_logo" style="background-image: url('img/bassmode_logo.png'); background-size: cover; background-color: black; grid-column: 1;"></div>
+				<div data-img="img/bassmode_sticker.jpg" id="bassmode_foto" style="background-image: url('img/bassmode_sticker.jpg'); grid-column: 2; grid-row:1;" ></div>
+				<div data-img="img/bassmode_foto.jpg" id="bassmode_sticker" style="background-image: url('img/bassmode_foto.jpg');	grid-column: 3;" ></div>
+			</section>
+			<div class="push"></div>
+		</main>
+		<footer class="footer">
+			<div class="socials">
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+				<a href="#"><i class="fab fa-facebook"></i></a>
+			</div>
+			<p>&copy; Copyright 2019 Rondas Jelle</p>
+		</footer>
+	</body>
+</html>
