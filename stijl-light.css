@@ -13,7 +13,7 @@ nav{
 nav a {
 	color: #00234C;
 	margin-bottom: 3rem;
-	
+
 }
 
 /*nav a:hover{
@@ -29,7 +29,7 @@ nav a {
 }
 
 footer{
-	background-color: #C2D8F8;
+	background: linear-gradient(to bottom, rgba(194,214,248,1) 0%, rgba(132,175,235,1) 100%);
 }
 
 footer p{

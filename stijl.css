@@ -3,7 +3,7 @@ nav.onzichtbaar {
 }
 
 body{
-  font-family: sans-serif;
+  font-family: Nunito;
 }
 
 .menu img{
@@ -18,7 +18,7 @@ nav a {
 	font-weight: 600;
 	text-transform: uppercase;
 	text-align: center;
-	font-family: "Open Sans";
+	font-family: "Nunito";
 	  background:
      linear-gradient(to bottom, #00234C 0%, #00234C 100%);
 	background-position: 0 100%;
@@ -50,8 +50,8 @@ header{
 header h1{
 	margin: auto;
 	font-size: 3rem;
-	font-weight: 600;
-	font-family: "Open sans";
+	font-weight: 700;
+	font-family: "Nunito";
 }
 
 header h1 b{
@@ -290,11 +290,12 @@ nav:before {
   bottom: 0;
   left: 0;
   margin: auto;
-  background: rgba(194, 216, 248, 0.97); width: 100%;
+  background: linear-gradient(to bottom, rgba(194,214,248,1) 0%, rgba(87,144,235,0.97) 100%);
   height: 0;
   padding-bottom: 100%;
   border-radius: 100%;
   overflow: hidden;
+
 }
 .open nav {
 	top: 0;
@@ -472,17 +473,22 @@ ul.menu li {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-
 .nieuweimg{
-	animation-name:test;
+	animation-name:opening;
 	animation-duration: .3s;
 }
 
-@keyframes test{
+html {
+  scroll-behavior:smooth;
+}
+
+@keyframes opening{
 	50%{
 		transform: scale(.9);
 	}
 }
+
+
 
 /* --- slideshow ---*/
 
@@ -523,16 +529,14 @@ ul.menu li {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
-
-
 
 @supports (grid-area: auto) {
 	@media (min-width: 700px) {

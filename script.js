@@ -78,5 +78,3 @@ function test() {
 
 
 button.addEventListener("click",test);
-
-
