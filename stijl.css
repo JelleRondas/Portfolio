@@ -27,6 +27,7 @@ nav a {
 	text-decoration: none;
 	transition: background-size .3s;
 	padding:.5rem;
+	border-radius: 3px;
 }
 
 nav a:hover{
@@ -371,7 +372,6 @@ ul.menu li {
 	margin: auto;
 	grid-row: 4;
 }
-
 
 .photos div:nth-child(1){
 	background-image: url('img/compressed/patronus.jpg');
