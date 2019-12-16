@@ -1,0 +1,40 @@
+video{
+  margin-bottom:1rem;
+  width:100%;
+
+}
+body{
+}
+
+main{
+  display:grid;
+  grid-gap: 1rem;
+
+}
+
+header{
+  z-index: 100;
+}
+
+
+video:nth-child(1){
+  margin-top:5rem;
+}
+
+.mejs-container .mejs-controls{
+  /* other rules */
+  visibility: hidden;
+}
+
+@supports (grid-area: auto) {
+	@media (min-width: 700px) {
+    video{
+      width:70%;
+      margin: auto;
+    }
+
+    main{
+      grid-gap: 5rem;
+    }
+  }
+}
