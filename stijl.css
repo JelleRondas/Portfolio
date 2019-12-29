@@ -136,7 +136,6 @@ main p{
 }
 
 footer{
-	height:20vh;
 	font-size: 1.5rem;
 	margin:auto;
 	text-align: center;
@@ -149,7 +148,7 @@ footer p{
 }
 
 .socials{
-	font-size: 5rem;
+	font-size:3rem;
 	transition: .3s;
 }
 
@@ -182,7 +181,7 @@ footer p{
 }
 
 .push{
-	height:50vh;
+	height:70vh;
 	grid-row: 3;
 }
 
@@ -620,7 +619,7 @@ html {
 			margin-left:auto;
 		}
 		.socials{
-			font-size: 4rem;
+			font-size: 3rem;
 		}
 		.photos div:nth-child(2){
 			grid-column: 2/4;
