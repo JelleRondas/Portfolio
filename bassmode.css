@@ -21,3 +21,7 @@
 		background-image: url('img/bassmode_foto.jpg');
 		grid-column: 3;
 	}
+
+div{
+	cursor: pointer; 
+}
