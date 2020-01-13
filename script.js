@@ -27,10 +27,18 @@ let imgDivs = document.querySelectorAll("section div");
 let i = 0;
 let attribuut;
 
+let nieuweCursor = document.getElementById('nieuweCursor');
+document.addEventListener('mousemove', function(e){
+	let x = e.clientX;
+	let y = e.clientY;
+	nieuweCursor.style.left = x + "px";
+	nieuweCursor.style.top = y + "px";
+})
+
 function verwijderen() {
 	this.remove();
 	nieuweCursor.style.display = "none";
-	mainGedeelte.style.cursor = "default";
+	body.style.cursor = "default";
 }
 
 
@@ -45,6 +53,7 @@ function vergroten() {
 	nieuweDiv.appendChild(nieuweImg);
 	nieuweDiv.addEventListener("click",verwijderen);
 	nieuweCursor.style.display = "inline";
+	body.style.cursor = "none";
 	mainGedeelte.style.cursor = "none";
 }
 
