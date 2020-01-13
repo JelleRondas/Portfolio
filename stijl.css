@@ -117,7 +117,21 @@ main{
 	margin-right: auto;
 	left:0;
 	right:0;
-	cursor: pointer;
+	cursor: none;
+}
+
+#nieuweCursor{
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	transition:0.1s;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+	pointer-events: none;
+	font-size: 16pt;
+	z-index: 1000;
+	color: white;
+	mix-blend-mode: difference;
 }
 
 h2{

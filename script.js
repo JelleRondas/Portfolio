@@ -29,7 +29,10 @@ let attribuut;
 
 function verwijderen() {
 	this.remove();
+	nieuweCursor.style.display = "none";
+	mainGedeelte.style.cursor = "default";
 }
+
 
 function vergroten() {
 	attribuut = this.getAttribute("data-img");
@@ -41,6 +44,8 @@ function vergroten() {
 	mainGedeelte.appendChild(nieuweDiv);
 	nieuweDiv.appendChild(nieuweImg);
 	nieuweDiv.addEventListener("click",verwijderen);
+	nieuweCursor.style.display = "inline";
+	mainGedeelte.style.cursor = "none";
 }
 
 while (i<imgDivs.length) {
