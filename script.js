@@ -8,6 +8,7 @@ let mainGedeelte = document.querySelector("main");
 let titel = document.querySelector("header h1");
 let logo = document.querySelector(".logo");
 
+
 /*function verbergMenu() {
 	navMenu.classList.add("onzichtbaar");
 }
@@ -30,7 +31,7 @@ let attribuut;
 let nieuweCursor = document.getElementById('nieuweCursor');
 document.addEventListener('mousemove', function(e){
 	let x = e.clientX;
-	let y = e.clientY;
+	let y = e.clientY + window.scrollY;
 	nieuweCursor.style.left = x + "px";
 	nieuweCursor.style.top = y + "px";
 })
@@ -38,7 +39,7 @@ document.addEventListener('mousemove', function(e){
 function verwijderen() {
 	this.remove();
 	nieuweCursor.style.display = "none";
-	body.style.cursor = "default";
+
 }
 
 
@@ -52,9 +53,15 @@ function vergroten() {
 	mainGedeelte.appendChild(nieuweDiv);
 	nieuweDiv.appendChild(nieuweImg);
 	nieuweDiv.addEventListener("click",verwijderen);
-	nieuweCursor.style.display = "inline";
-	body.style.cursor = "none";
-	mainGedeelte.style.cursor = "none";
+	console.log(window.scrollY);
+
+	nieuweImg.addEventListener('mouseover', function(){
+		nieuweCursor.style.display = "inline";
+	})
+
+	nieuweImg.addEventListener('mouseout', function(){
+		nieuweCursor.style.display = "none";
+	})
 }
 
 while (i<imgDivs.length) {

@@ -134,6 +134,12 @@ main{
 	mix-blend-mode: difference;
 }
 
+.nieuweimg:hover ~ #nieuweCursor{
+	display: inline;
+	cursor:none;
+	font-size: 50pt;
+}
+
 h2{
 	font-size: 3rem;
 }
