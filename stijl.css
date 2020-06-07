@@ -399,6 +399,7 @@ ul.menu li {
 }
 
 .zero video{
+	z-index: -1;
 	width:100%;
 
 	grid-row: 3;
@@ -522,7 +523,7 @@ html {
 
 /*rode kruis vlaanderen*/
 #rodekruis h2{
-	margin-bottom: 10rem;
+	margin-bottom: 2rem;
 }
 
 #rodekruis h3{
@@ -754,7 +755,7 @@ img.rebus{
 
 		/*rode kruis vlaanderen*/
 		#rodekruis h2{
-			margin-bottom: 10rem;
+			margin-bottom: 2rem;
 		}
 
 		#rodekruis h3{
