@@ -16,6 +16,10 @@ header{
   z-index: 100;
 }
 
+h2{
+  margin-top: 5rem;
+}
+
 
 video:nth-child(1){
   margin-top:5rem;
@@ -26,6 +30,8 @@ video:nth-child(1){
   visibility: hidden;
 }
 
+
+
 @supports (grid-area: auto) {
 	@media (min-width: 700px) {
     video{
@@ -34,7 +40,13 @@ video:nth-child(1){
     }
 
     main{
-      grid-gap: 5rem;
+      grid-gap: 2rem;
+    }
+
+    h2{
+      margin:auto;
+      margin-top: 3rem;
+      width: 70%;
     }
   }
 }

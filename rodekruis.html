@@ -24,7 +24,7 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
-    <header>
+    <header style="z-index: 100;">
 			<a href="index.html"><img src="img/logo2.svg" class="logo" alt=""></a>
 			<h1>Rondas Jelle <br><b>Portfolio</b></h1>
 			<button class="hamburger hamburger--elastic" type="button">
@@ -44,16 +44,36 @@
 				</ul>
 			</nav>
     </header>
-		<main id="bassmode">
-			<h2>Bassmode</h2>
-			<section class="photos" style="grid-template-columns: 1fr 1fr 1fr; padding-top:10rem;">
-				<div data-img="img/bassmode_logo.png" id="bassmode_logo" style="background-image: url('img/bassmode_logo.png'); background-size: cover; background-color: black; grid-column: 1;"></div>
-				<div data-img="img/bassmode_sticker.jpg" id="bassmode_foto" style="background-image: url('img/bassmode_sticker.jpg'); grid-column: 2; grid-row:1;" ></div>
-				<div data-img="img/bassmode_foto.jpg" id="bassmode_sticker" style="background-image: url('img/bassmode_foto.jpg');	grid-column: 3;" ></div>
-				<div data-img="img/bassmode_mockup.jpg" id="bassmode_mockup" style="background-image: url('img/bassmode_mockup.jpg');	grid-column: 1/4; height:60vh;" ></div>
+		<main id="rodekruis">
+			<h2>Rode Kruis-Vlaanderen</h2>
+			<section class="RKVanimatie">
+				<img src="img/iPhoneMockup_animatie.jpg" alt="">
+				<div>
+					<section>
+						<h3>Animatie dringend bloedtekort</h3>
+						<p>Deze korte animatie is ontworpen om mensen aan te zetten om bloed te doneren wanneer een of meerdere bloedgroep(en) in een kritieke voorraad komen te staan. Er is een animatie gemaakt voor elke bloedgroep en er is ook een algemene versie die gebruikt zal worden wanneer er meerdere bloedgroepen gecommuniceerd moeten worden. Deze animatie zal gebruikt worden op social media van het Rode Kruis-Vlaanderen.</p>
+					</section>
+					<video controls>
+						<source src="video/bloedtekort.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</section>
-			<div id="nieuweCursor">close</div>
 
+			<section class="RKVrebussen">
+				<img src="img/iPhoneMockup_rebussen.jpg" alt="">
+				<div>
+					<section>
+						<h3>Rebussen</h3>
+						<p>Deze rebussen zijn een onderdeel van de spelletjesreeks. Ze zijn bedoeld om interactie te doen ontstaan: mensen kunnen de oplossing in de reacties plaatsen of de rebus naar elkaar doorsturen. Deze zullen in de zomer op Instagram geplaatst worden. Er zijn vijf verschillende rebussen en elke rebus is een activiteit of actie die het Rode Kruis organiseert.</p>
+					</section>
+					<img class="rebus" src="img/rebus_BloedDoneren.png" alt="">
+					<img class="rebus" src="img/rebus_EersteHulpOpFestivals.png" alt="">
+					<img class="rebus" src="img/rebus_HulpBijRampen.png" alt="">
+					<img class="rebus" src="img/rebus_VermistenOpsporen.png" alt="">
+					<img class="rebus" src="img/rebus_Zorgbib.png" alt="">
+				</div>
+			</section>
 		</main>
 		<button onclick="topFunction()" id="backtotop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 

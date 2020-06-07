@@ -1,73 +1,7 @@
 // hier komt je code
 // console.log("Hallo wereld!");
 
-let menuKnop = document.querySelector(".menu");
-let menuKnopIMG = document.querySelector(".menu img");
-let navMenu = document.querySelector("nav");
-let mainGedeelte = document.querySelector("main");
-let titel = document.querySelector("header h1");
-let logo = document.querySelector(".logo");
 
-
-/*function verbergMenu() {
-	navMenu.classList.add("onzichtbaar");
-}
-mainGedeelte.addEventListener("click",verbergMenu);
-titel.addEventListener("click",verbergMenu);
-logo.addEventListener("click",verbergMenu);
-navMenu.addEventListener("click",verbergMenu);
-
-function toonMenu() {
-	navMenu.classList.remove("onzichtbaar");
-}
-menuKnop.addEventListener("click",toonMenu);*/
-
-
-
-let imgDivs = document.querySelectorAll("section div");
-let i = 0;
-let attribuut;
-
-let nieuweCursor = document.getElementById('nieuweCursor');
-document.addEventListener('mousemove', function(e){
-	let x = e.clientX;
-	let y = e.clientY + window.scrollY;
-	nieuweCursor.style.left = x + "px";
-	nieuweCursor.style.top = y + "px";
-})
-
-function verwijderen() {
-	this.remove();
-	nieuweCursor.style.display = "none";
-
-}
-
-
-function vergroten() {
-	attribuut = this.getAttribute("data-img");
-	let nieuweImg = document.createElement("img");
-	let nieuweDiv = document.createElement("div");
-	nieuweImg.setAttribute("src",attribuut);
-	nieuweDiv.classList.add("divnieuweimg");
-	nieuweImg.classList.add("nieuweimg");
-	mainGedeelte.appendChild(nieuweDiv);
-	nieuweDiv.appendChild(nieuweImg);
-	nieuweDiv.addEventListener("click",verwijderen);
-	console.log(window.scrollY);
-
-	nieuweImg.addEventListener('mouseover', function(){
-		nieuweCursor.style.display = "inline";
-	})
-
-	nieuweImg.addEventListener('mouseout', function(){
-		nieuweCursor.style.display = "none";
-	})
-}
-
-while (i<imgDivs.length) {
-	imgDivs[i].addEventListener("click", vergroten);
-	i++;
-}
 
 //dark mode
 let darkLink = document.querySelectorAll("nav ul li a")[2];
@@ -99,3 +33,24 @@ function test() {
 
 
 button.addEventListener("click",test);
+
+
+//Get the button:
+mybutton = document.getElementById("backtotop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
