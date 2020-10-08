@@ -50,7 +50,6 @@ function vergroten() {
 	mainGedeelte.appendChild(nieuweDiv);
 	nieuweDiv.appendChild(nieuweImg);
 	nieuweDiv.addEventListener("click",verwijderen);
-	console.log(window.scrollY);
 
 	nieuweImg.addEventListener('mouseover', function(){
 		nieuweCursor.style.display = "inline";
