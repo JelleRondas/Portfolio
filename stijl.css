@@ -201,6 +201,17 @@ footer p{
 	height:80vh;
 }
 
+.mail{
+		color:black;
+		line-height: 25pt;
+		font-size: 1.5rem;
+}
+
+.mail:hover{
+	opacity: .8;
+	background-color: white;
+}
+
 .about h2{
 	margin-top: 20vh;
 	margin-bottom: 1vh;
